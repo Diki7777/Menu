@@ -21,16 +21,16 @@
     /* ======= HEADER ======= */
     header {
       display: flex;
-      flex-wrap: wrap; /* Membolehkan elemen header untuk tumpuk pada layar kecil */
-      justify-content: space-between;
+      justify-content: space-between; /* Logo kiri-kanan dan judul tengah */
       align-items: center;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 1rem 5%;
+      background: rgba(0, 0, 0, 0.6); /* Transparansi hitam */
+      padding: 1.2rem 5%; /* Padding kiri dan kanan */
       font-size: 2rem;
       border-bottom: 5px solid #8b4513;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
       width: 100%;
       box-sizing: border-box;
+      flex-wrap: wrap; /* Menjaga elemen di header tetap berada di dalam satu baris */
     }
 
     /* Logo kiri dan kanan */
@@ -47,7 +47,6 @@
       color: #ffcc00;
       white-space: nowrap;
       margin: 0;
-      padding: 10px 0; /* Memberikan padding agar ada ruang antara logo dan judul */
     }
 
     /* ======= MENU SECTION ======= */
@@ -73,7 +72,7 @@
       padding: 1rem;
       margin-bottom: 1rem;
       border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .menu-item h3 {
@@ -108,14 +107,15 @@
     /* ======= RESPONSIVE MEDIA QUERIES ======= */
     @media (max-width: 768px) {
       header {
-        padding: 1rem 2%; /* Menyesuaikan padding header */
+        padding: 1rem 2%; /* Menyesuaikan padding header di perangkat mobile */
         font-size: 1.8rem;
-        flex-direction: column; /* Tumpuk elemen header di perangkat kecil */
+        flex-direction: column; /* Tumpukkan elemen header pada perangkat kecil */
         text-align: center;
       }
       
       header h1 {
         font-size: 1.6rem;
+        margin-top: 1rem; /* Memberikan ruang antara logo dan judul */
       }
 
       header img {
@@ -123,7 +123,7 @@
       }
 
       .menu-item h3 {
-        font-size: 1.2rem; /* Menyesuaikan ukuran font menu */
+        font-size: 1.2rem;
       }
 
       .menu-item-number {
