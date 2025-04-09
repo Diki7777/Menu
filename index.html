@@ -120,13 +120,18 @@
         /* Media Queries for Responsiveness */
         @media (max-width: 768px) {
             header {
-                flex-direction: column;
+                flex-direction: column; /* Menata ulang elemen logo dan judul */
                 text-align: center;
+                padding: 1.5rem;
             }
 
             header h1 {
                 font-size: 2.2rem;
                 margin-top: 1rem;
+            }
+
+            header img {
+                height: 50px; /* Ukuran logo lebih kecil pada perangkat mobile */
             }
 
             .menu-item {
@@ -152,12 +157,12 @@
         /* Mobile View Adjustments */
         @media (max-width: 480px) {
             header {
-                padding: 1.5rem;
+                padding: 1rem;
                 font-size: 2rem;
             }
 
             header img {
-                height: 50px;
+                height: 40px; /* Ukuran logo lebih kecil */
             }
 
             .menu-item h3 {
