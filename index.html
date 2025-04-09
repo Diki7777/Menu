@@ -21,8 +21,8 @@
     /* Header */
     header {
       display: flex;
-      justify-content: space-between; /* Logo di kiri atau kanan, judul di tengah */
-      align-items: center;
+      justify-content: center; /* Menyusun konten header ke tengah */
+      align-items: center; /* Menjaga elemen tetap terpusat secara vertikal */
       position: relative;
       background: rgba(0, 0, 0, 0.6); /* Transparansi di background header */
       color: #fff;
@@ -30,15 +30,17 @@
       font-size: 2.5rem;
       border-bottom: 5px solid #8b4513; /* Warm brown border */
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      flex-wrap: wrap;
+      text-align: center;
     }
 
-    /* Logo di Kiri atau Kanan */
+    /* Logo di kiri atau kanan */
     header img {
-      height: 200px; /* Ukuran logo */
+      height: 60px; /* Ukuran logo */
       width: auto;
       position: absolute;
       top: 20px;
-      left: 20px; /* Atau gunakan right: 20px jika ingin logo di kanan */
+      left: 20px;
     }
 
     /* Judul */
