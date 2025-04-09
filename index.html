@@ -21,6 +21,7 @@
     /* ======= HEADER ======= */
     header {
       display: flex;
+      flex-wrap: wrap; /* Membolehkan elemen header untuk tumpuk pada layar kecil */
       justify-content: space-between;
       align-items: center;
       background: rgba(0, 0, 0, 0.6);
@@ -46,6 +47,7 @@
       color: #ffcc00;
       white-space: nowrap;
       margin: 0;
+      padding: 10px 0; /* Memberikan padding agar ada ruang antara logo dan judul */
     }
 
     /* ======= MENU SECTION ======= */
@@ -106,8 +108,10 @@
     /* ======= RESPONSIVE MEDIA QUERIES ======= */
     @media (max-width: 768px) {
       header {
-        padding: 1rem 2%; /* Sesuaikan padding header di perangkat mobile */
+        padding: 1rem 2%; /* Menyesuaikan padding header */
         font-size: 1.8rem;
+        flex-direction: column; /* Tumpuk elemen header di perangkat kecil */
+        text-align: center;
       }
       
       header h1 {
@@ -119,7 +123,7 @@
       }
 
       .menu-item h3 {
-        font-size: 1.2rem; /* Mengurangi ukuran font menu */
+        font-size: 1.2rem; /* Menyesuaikan ukuran font menu */
       }
 
       .menu-item-number {
