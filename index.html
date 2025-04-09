@@ -22,15 +22,16 @@
     header {
       display: flex;
       justify-content: center; /* Menyusun konten header ke tengah */
-      align-items: flex-end; /* Menyusun teks di bawah gambar logo */
+      align-items: flex-start; /* Menyusun teks di bawah gambar logo */
       position: relative;
       background-image: url('logo.png'); /* Gunakan logo sebagai background */
       background-size: cover; /* Ukuran gambar sesuai ukuran container */
-      background-position: center; /* Menyusun gambar di tengah */
+      background-position: center top; /* Menyusun gambar di bagian atas */
       background-repeat: no-repeat;
-      height: 400px; /* Menentukan tinggi header */
+      height: 450px; /* Menentukan tinggi header untuk memastikan logo terlihat jelas */
       color: #fff;
       text-align: center;
+      padding-top: 150px; /* Memberikan ruang dari atas untuk teks judul */
       padding-bottom: 1rem; /* Memberikan ruang di bawah gambar untuk teks */
     }
 
@@ -115,11 +116,12 @@
     /* Media Queries for Responsiveness */
     @media (max-width: 768px) {
       header {
-        height: 300px; /* Menyesuaikan tinggi header pada perangkat mobile */
+        height: 350px; /* Menyesuaikan tinggi header pada perangkat mobile */
+        padding-top: 120px; /* Memberikan lebih banyak ruang untuk teks pada perangkat mobile */
       }
 
       header h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
       }
 
       .menu-item {
@@ -145,11 +147,12 @@
     /* Mobile View Adjustments */
     @media (max-width: 480px) {
       header {
-        height: 250px; /* Lebih pendek untuk perangkat mobile */
+        height: 300px; /* Lebih pendek untuk perangkat mobile */
+        padding-top: 100px; /* Memberikan ruang tambahan di atas header */
       }
 
       header h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
 
       .menu-item h3 {
