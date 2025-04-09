@@ -21,7 +21,7 @@
     /* Header */
     header {
       display: flex;
-      justify-content: center; /* Menyusun konten header ke tengah */
+      justify-content: center; /* Menyusun konten header ke tengah secara horizontal */
       align-items: center; /* Menjaga elemen tetap terpusat secara vertikal */
       position: relative;
       background: rgba(0, 0, 0, 0.6); /* Transparansi di background header */
@@ -30,17 +30,15 @@
       font-size: 2.5rem;
       border-bottom: 5px solid #8b4513; /* Warm brown border */
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-      flex-wrap: wrap;
-      text-align: center;
     }
 
-    /* Logo di kiri atau kanan */
+    /* Logo di kiri */
     header img {
       height: 60px; /* Ukuran logo */
       width: auto;
       position: absolute;
       top: 20px;
-      left: 20px;
+      left: 20px; /* Logo tetap di kiri atas */
     }
 
     /* Judul */
@@ -125,18 +123,20 @@
     /* Media Queries for Responsiveness */
     @media (max-width: 768px) {
       header {
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
         padding: 1rem;
       }
 
       header img {
-        position: static;
-        margin-bottom: 1rem; /* Membuat logo berada di atas judul */
+        position: absolute;
+        left: 20px; /* Logo tetap di kiri */
+        top: 20px;
       }
 
       header h1 {
         font-size: 2.2rem;
+        padding-left: 80px; /* Memberikan ruang untuk logo */
       }
 
       .menu-item {
@@ -193,8 +193,8 @@
 <body>
 
 <header>
-    <!-- Logo di kiri atau kanan -->
-    <img src="logo.png" alt="Logo Kampung Kuliner Djati Asri"> <!-- Logo hanya 1 di pojok kiri atau kanan -->
+    <!-- Logo di kiri -->
+    <img src="logo.png" alt="Logo Kampung Kuliner Djati Asri"> <!-- Logo tetap di kiri atas -->
     <h1>Daftar Menu Kampung Kuliner Djati Asri</h1>
 </header>
 
