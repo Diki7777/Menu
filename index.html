@@ -31,7 +31,7 @@
       height: 450px; /* Menentukan tinggi header untuk memastikan logo terlihat jelas */
       color: #fff;
       text-align: center;
-      padding-top: 100px; /* Memberikan ruang dari atas untuk teks judul */
+      padding-top: 120px; /* Memberikan lebih banyak ruang dari atas untuk teks judul */
       padding-bottom: 0; /* Mengurangi ruang di bawah header */
     }
 
@@ -120,11 +120,11 @@
     @media (max-width: 768px) {
       header {
         height: 350px; /* Menyesuaikan tinggi header pada perangkat mobile */
-        padding-top: 100px; /* Memberikan lebih banyak ruang untuk teks pada perangkat mobile */
+        padding-top: 120px; /* Memberikan lebih banyak ruang untuk teks pada perangkat mobile */
       }
 
-      header h1 {
-        font-size: 2.5rem;
+      .main-title {
+        font-size: 2.5rem; /* Ukuran font lebih kecil untuk perangkat tablet */
       }
 
       .menu-item {
@@ -145,10 +145,6 @@
       .menu-title {
         font-size: 1.5rem;
       }
-
-      .main-title {
-        font-size: 2.5rem; /* Ukuran font lebih kecil untuk perangkat tablet */
-      }
     }
 
     @media (max-width: 480px) {
@@ -157,8 +153,8 @@
         padding-top: 80px; /* Memberikan ruang tambahan di atas header */
       }
 
-      header h1 {
-        font-size: 2rem;
+      .main-title {
+        font-size: 2rem; /* Ukuran font lebih kecil di perangkat ponsel kecil */
       }
 
       .menu-item h3 {
@@ -177,10 +173,6 @@
 
       .menu-item {
         padding: 10px;
-      }
-
-      .main-title {
-        font-size: 2rem; /* Ukuran font lebih kecil di perangkat ponsel kecil */
       }
     }
   </style>
