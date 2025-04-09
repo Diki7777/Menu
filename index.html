@@ -21,20 +21,17 @@
     /* Header */
     header {
       display: flex;
-      justify-content: center; /* Menyusun konten header ke tengah secara horizontal */
-      align-items: center; /* Menjaga elemen tetap terpusat secara vertikal */
+      justify-content: center; /* Menyusun konten header ke tengah */
+      align-items: flex-end; /* Menyusun teks di bawah gambar logo */
       position: relative;
       background-image: url('logo.png'); /* Gunakan logo sebagai background */
-      background-size: cover;
-      background-position: center;
+      background-size: cover; /* Ukuran gambar sesuai ukuran container */
+      background-position: center; /* Menyusun gambar di tengah */
       background-repeat: no-repeat;
+      height: 400px; /* Menentukan tinggi header */
       color: #fff;
-      padding: 5rem 2rem; /* Sesuaikan padding untuk memberikan ruang untuk teks */
-      font-size: 2.5rem;
-      border-bottom: 5px solid #8b4513; /* Warm brown border */
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
       text-align: center;
-      background-blend-mode: darken; /* Mencampur gambar dan teks untuk kontras lebih baik */
+      padding-bottom: 1rem; /* Memberikan ruang di bawah gambar untuk teks */
     }
 
     /* Judul */
@@ -43,7 +40,7 @@
       font-weight: bold;
       color: #ffcc00; /* Warna teks kuning cerah */
       margin: 0;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Menambahkan bayangan pada teks agar lebih terlihat */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Bayangan teks untuk kontras lebih baik */
     }
 
     /* Menu Section */
@@ -118,14 +115,11 @@
     /* Media Queries for Responsiveness */
     @media (max-width: 768px) {
       header {
-        flex-direction: column;
-        padding: 3rem 1rem; /* Menyesuaikan padding untuk tampilan lebih baik */
-        font-size: 2rem;
+        height: 300px; /* Menyesuaikan tinggi header pada perangkat mobile */
       }
 
       header h1 {
-        font-size: 2.5rem;
-        margin-top: 1rem;
+        font-size: 2.2rem;
       }
 
       .menu-item {
@@ -151,12 +145,11 @@
     /* Mobile View Adjustments */
     @media (max-width: 480px) {
       header {
-        padding: 2rem 1rem;
-        font-size: 1.8rem;
+        height: 250px; /* Lebih pendek untuk perangkat mobile */
       }
 
       header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
 
       .menu-item h3 {
