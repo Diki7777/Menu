@@ -15,7 +15,6 @@
       background-attachment: fixed;
       font-family: Arial, sans-serif;
       color: #fff;
-      overflow-x: hidden; /* Menghindari geseran horizontal */
     }
 
     /* ======= HEADER ======= */
@@ -23,12 +22,12 @@
       display: flex;
       justify-content: space-between; /* Menyusun elemen di kiri dan kanan */
       align-items: center; /* Memastikan logo dan teks header sejajar tengah */
-      position: relative;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.6); /* Transparansi di background header */
       padding: 1.5rem 5%; /* Memberikan padding dari kiri dan kanan untuk memberikan ruang */
       font-size: 2rem;
       border-bottom: 5px solid #8b4513;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      width: 100%;
     }
 
     /* Logo kiri dan kanan */
@@ -44,6 +43,7 @@
       font-size: 2rem;
       color: #ffcc00;
       white-space: nowrap;
+      margin: 0;
     }
 
     /* Menu Section */
@@ -104,11 +104,12 @@
     /* Media Queries for Responsiveness */
     @media (max-width: 768px) {
       header {
-        padding: 1rem 2%; /* Mengurangi padding header di perangkat mobile */
+        padding: 1rem 5%; /* Mengurangi padding header di perangkat mobile */
+        font-size: 1.8rem;
       }
       
       header h1 {
-        font-size: 1.6rem; /* Mengurangi ukuran font pada layar kecil */
+        font-size: 1.6rem;
       }
 
       header img {
@@ -136,7 +137,7 @@
       }
 
       header img {
-        height: 40px;
+        height: 45px;
       }
 
       header h1 {
