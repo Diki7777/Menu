@@ -21,26 +21,27 @@
     /* Header */
     header {
       display: flex;
-      justify-content: center; /* Menyusun konten header ke tengah */
-      align-items: flex-start; /* Menyusun teks di bawah gambar logo */
+      justify-content: center;
+      align-items: flex-start;
       position: relative;
       background-image: url('logo.png'); /* Gunakan logo sebagai background */
-      background-size: cover; /* Ukuran gambar sesuai ukuran container */
-      background-position: center top; /* Menyusun gambar di bagian atas */
+      background-size: cover;
+      background-position: center top;
       background-repeat: no-repeat;
       height: 450px; /* Menentukan tinggi header untuk memastikan logo terlihat jelas */
       color: #fff;
       text-align: center;
-      padding-top: 130px; /* Memberikan ruang dari atas untuk teks judul */
+      padding-top: 100px; /* Memberikan ruang dari atas untuk teks judul */
       padding-bottom: 0; /* Mengurangi ruang di bawah header */
     }
 
-    /* Judul */
-    header h1 {
+    /* Teks "Daftar Menu Kampung Kuliner Djati Asri" */
+    .main-title {
       font-size: 3rem;
       font-weight: bold;
       color: #ffcc00; /* Warna teks kuning cerah */
-      margin: 0;
+      text-align: center;
+      margin-top: -50px; /* Mengatur jarak dengan header */
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Bayangan teks untuk kontras lebih baik */
     }
 
@@ -49,7 +50,7 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 2rem 1rem;
-      padding-top: 100px; /* Menambahkan padding-top untuk memberi ruang antara header dan konten */
+      padding-top: 50px; /* Memberikan padding atas untuk konten */
     }
 
     .menu-section {
@@ -180,9 +181,13 @@
 <body>
 
 <header>
-    <!-- Judul -->
-    <h1>Daftar Menu Kampung Kuliner Djati Asri</h1>
+    <!-- Header image with logo -->
 </header>
+
+<!-- Teks di bawah header -->
+<div class="main-title">
+  Daftar Menu Kampung Kuliner Djati Asri
+</div>
 
 <div class="container">
     <!-- Sayap Sisi Barat -->
