@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daftar Menu Kampung Kuliner Djati Asri</title>
   <style>
     body {
@@ -15,56 +15,41 @@
       background-attachment: fixed;
       font-family: Arial, sans-serif;
       color: #fff;
+      overflow-x: hidden; /* Menghindari geseran horizontal */
     }
 
-    /* ===== HEADER FLEX ===== */
+    /* ======= HEADER ======= */
     header {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      justify-content: space-between; /* Menyusun elemen di kiri dan kanan */
+      align-items: center; /* Memastikan logo dan teks header sejajar tengah */
+      position: relative;
       background: rgba(0, 0, 0, 0.6);
-      padding: 1.2rem;
+      padding: 1.5rem 5%; /* Memberikan padding dari kiri dan kanan untuk memberikan ruang */
+      font-size: 2rem;
       border-bottom: 5px solid #8b4513;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
 
+    /* Logo kiri dan kanan */
     header img {
-      height: 60px;
+      height: 60px; 
       width: auto;
     }
 
+    /* Judul */
     header h1 {
-      margin: 0;
-      flex: 1;
+      flex-grow: 1;
       text-align: center;
       font-size: 2rem;
       color: #ffcc00;
       white-space: nowrap;
     }
 
-    /* ========== RESPONSIVE ADJUSTMENT ========== */
-    @media (max-width: 768px) {
-      header img {
-        height: 50px;
-      }
-      header h1 {
-        font-size: 1.4rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header img {
-        height: 45px;
-      }
-      header h1 {
-        font-size: 1.2rem;
-      }
-    }
-
-    /* ========== KONTEN MENU ========== */
+    /* Menu Section */
     .container {
       max-width: 1200px;
-      margin: auto;
+      margin: 0 auto;
       padding: 2rem 1rem;
     }
 
@@ -114,6 +99,63 @@
       line-height: 30px;
       font-weight: bold;
       margin-right: 10px;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      header {
+        padding: 1rem 2%; /* Mengurangi padding header di perangkat mobile */
+      }
+      
+      header h1 {
+        font-size: 1.6rem; /* Mengurangi ukuran font pada layar kecil */
+      }
+
+      header img {
+        height: 50px; /* Ukuran logo lebih kecil pada perangkat mobile */
+      }
+
+      .menu-item h3 {
+        font-size: 1.2rem; /* Mengurangi ukuran font menu */
+      }
+
+      .menu-item-number {
+        font-size: 1.2rem;
+        padding: 8px 10px;
+      }
+
+      .menu-title {
+        font-size: 1.3rem;
+        padding: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 1rem 5%; /* Lebih kecil di layar sangat kecil */
+      }
+
+      header img {
+        height: 40px;
+      }
+
+      header h1 {
+        font-size: 1.4rem;
+      }
+
+      .menu-item h3 {
+        font-size: 1.1rem;
+      }
+
+      .menu-item-number {
+        font-size: 1.1rem;
+        padding: 8px 10px;
+      }
+
+      .menu-title {
+        font-size: 1.2rem;
+        padding: 8px;
+      }
     }
   </style>
 </head>
