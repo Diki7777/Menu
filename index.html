@@ -25,14 +25,23 @@
       align-items: flex-start;
       position: relative;
       background-image: url('logo.png'); /* Gunakan logo sebagai background */
-      background-size: cover;
-      background-position: center top;
+      background-size: cover; /* Pastikan gambar latar belakang menutupi seluruh area */
+      background-position: center; /* Menyusun gambar di tengah agar tidak terpotong */
       background-repeat: no-repeat;
-      height: 450px;
+      height: 100vh; /* Gunakan tinggi penuh layar */
       color: #fff;
       text-align: center;
       padding-top: 100px;
       padding-bottom: 0;
+    }
+
+    /* Judul */
+    header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #ffcc00; /* Warna teks kuning cerah */
+      margin: 0;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Bayangan teks untuk kontras lebih baik */
     }
 
     /* Menu Section */
@@ -43,7 +52,7 @@
       padding-top: 50px;
     }
 
-    /* Judul Utama */
+    /* Judul Daftar Menu Kampung Kuliner Djati Asri */
     .main-title {
       background-color: rgba(139, 69, 19, 0.7);
       color: white;
@@ -122,8 +131,13 @@
 
     /* Media Queries for Responsiveness */
     @media (max-width: 768px) {
-      .main-title {
-        font-size: 1.8rem;
+      header {
+        height: 350px; /* Menyesuaikan tinggi header pada perangkat mobile */
+        padding-top: 80px;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
       }
 
       .menu-item {
@@ -147,8 +161,13 @@
     }
 
     @media (max-width: 480px) {
-      .main-title {
-        font-size: 1.5rem;
+      header {
+        height: 300px;
+        padding-top: 60px;
+      }
+
+      header h1 {
+        font-size: 2rem;
       }
 
       .menu-item h3 {
@@ -175,42 +194,43 @@
 
 <header>
     <!-- Header image with logo -->
+    <h1>Daftar Menu Kampung Kuliner Djati Asri</h1>
 </header>
 
 <div class="container">
-  <!-- Teks Judul Utama -->
-  <div class="main-title">Daftar Menu Kampung Kuliner Djati Asri</div>
+    <!-- Teks Judul Utama -->
+    <div class="main-title">Daftar Menu Kampung Kuliner Djati Asri</div>
 
-  <!-- Sayap Sisi Barat -->
-  <div class="menu-section">
-    <div class="menu-title">Sayap Sisi Barat</div>
+    <!-- Sayap Sisi Barat -->
+    <div class="menu-section">
+        <div class="menu-title">Sayap Sisi Barat</div>
 
-    <div class="menu-item">
-      <div class="menu-item-number">1</div>
-      <div>
-        <h3>IBU SIYEM</h3>
-        <p>Rujak - <span>5K</span></p>
-        <p>Pisang (Harga bervariasi)</p>
-      </div>
+        <div class="menu-item">
+            <div class="menu-item-number">1</div>
+            <div>
+                <h3>IBU SIYEM</h3>
+                <p>Rujak - <span>5K</span></p>
+                <p>Pisang (Harga bervariasi)</p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-item-number">2</div>
+            <div>
+                <h3>IBU SASHA</h3>
+                <p>Bakso Goreng - <span>1K</span> (Sold Out)</p>
+                <p>Aneka Minuman - <span>3K</span> (Sold Out)</p>
+            </div>
+        </div>
+
+        <!-- Lanjutkan menu 3-10 sesuai dengan struktur di atas -->
     </div>
 
-    <div class="menu-item">
-      <div class="menu-item-number">2</div>
-      <div>
-        <h3>IBU SASHA</h3>
-        <p>Bakso Goreng - <span>1K</span> (Sold Out)</p>
-        <p>Aneka Minuman - <span>3K</span> (Sold Out)</p>
-      </div>
+    <!-- Sayap Sisi Timur -->
+    <div class="menu-section">
+        <div class="menu-title">Sayap Sisi Timur</div>
+        <!-- Menu lainnya bisa dimasukkan di sini -->
     </div>
-
-    <!-- Lanjutkan menu 3-10 sesuai dengan struktur di atas -->
-  </div>
-
-  <!-- Sayap Sisi Timur -->
-  <div class="menu-section">
-    <div class="menu-title">Sayap Sisi Timur</div>
-    <!-- Menu lainnya bisa dimasukkan di sini -->
-  </div>
 </div>
 
 </body>
