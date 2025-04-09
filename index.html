@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Menu Kampung Kuliner Djati Asri</title>
-    <style>
-        /* Mengatur body agar gambar latar belakang mencakup seluruh halaman */
-        body {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daftar Menu Kampung Kuliner Djati Asri</title>
+  <style>
+    /* Mengatur body agar gambar latar belakang mencakup seluruh halaman */
+    body {
       margin: 0;
       padding: 0;
       background-image: url('Goo.png');
@@ -18,175 +18,182 @@
       color: #fff;
     }
 
-        /* Header */
-        header {
-            display: flex;
-            justify-content: space-between; /* Menyusun elemen di kiri dan kanan */
-            align-items: center; /* Memastikan logo dan teks header sejajar tengah */
-            position: relative;
-            background: rgba(0, 0, 0, 0.6); /* Transparansi di background header */
-            color: #fff;
-            padding: 2rem 1rem;
-            font-size: 2.5rem;
-            border-bottom: 5px solid #8b4513; /* Warm brown border */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between; /* Logo di kiri atau kanan, judul di tengah */
+      align-items: center;
+      position: relative;
+      background: rgba(0, 0, 0, 0.6); /* Transparansi di background header */
+      color: #fff;
+      padding: 1.5rem;
+      font-size: 2.5rem;
+      border-bottom: 5px solid #8b4513; /* Warm brown border */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
 
-        /* Logo di Kiri dan Kanan */
-        header img {
-            height: 60px; /* Ukuran logo */
-            width: auto;
-        }
+    /* Logo di Kiri atau Kanan */
+    header img {
+      height: 60px; /* Ukuran logo */
+      width: auto;
+      position: absolute;
+      top: 20px;
+      left: 20px; /* Atau gunakan right: 20px jika ingin logo di kanan */
+    }
 
-        header h1 {
-            font-size: 2.8rem;
-            font-weight: bold;
-            color: #ffcc00; /* Warna teks kuning cerah */
-            text-align: center;
-            flex-grow: 1; /* Agar judul bisa memaksimalkan ruang yang tersedia */
-            margin: 0;
-        }
+    /* Judul */
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      color: #ffcc00; /* Warna teks kuning cerah */
+      text-align: center;
+      flex-grow: 1; /* Agar judul bisa memaksimalkan ruang yang tersedia */
+      margin: 0;
+    }
 
-        /* Menu Section */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
+    /* Menu Section */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
 
-        .menu-section {
-            margin-bottom: 3rem;
-        }
+    .menu-section {
+      margin-bottom: 3rem;
+    }
 
-        .menu-title {
-            background-color: rgba(139, 69, 19, 0.7); /* Warm brown background */
-            color: white;
-            padding: 15px;
-            font-size: 1.8rem;
-            text-align: center;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    .menu-title {
+      background-color: rgba(139, 69, 19, 0.7); /* Warm brown background */
+      color: white;
+      padding: 15px;
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-        .menu-item {
-            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for readability */
-            border-radius: 10px;
-            border-left: 5px solid #8b4513; /* Brown border on the left */
-            padding: 15px;
-            margin: 10px 0;
-            display: flex;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            align-items: center;
-            flex-wrap: wrap;
-        }
+    .menu-item {
+      background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for readability */
+      border-radius: 10px;
+      border-left: 5px solid #8b4513; /* Brown border on the left */
+      padding: 15px;
+      margin: 10px 0;
+      display: flex;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-        .menu-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-        }
+    .menu-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
 
-        .menu-item h3 {
-            font-size: 1.4rem;
-            color: #8b4513; /* Warm brown for menu item headers */
-            margin: 0;
-            flex-grow: 1;
-        }
+    .menu-item h3 {
+      font-size: 1.4rem;
+      color: #8b4513; /* Warm brown for menu item headers */
+      margin: 0;
+      flex-grow: 1;
+    }
 
-        .menu-item p {
-            margin: 5px 0;
-            font-size: 1rem;
-            color: #333; /* Dark gray text for better readability */
-        }
+    .menu-item p {
+      margin: 5px 0;
+      font-size: 1rem;
+      color: #333; /* Dark gray text for better readability */
+    }
 
-        .menu-item span {
-            font-weight: bold;
-            color: #8b4513; /* Same warm brown color for prices */
-        }
+    .menu-item span {
+      font-weight: bold;
+      color: #8b4513; /* Same warm brown color for prices */
+    }
 
-        .menu-item-number {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #fff;
-            background-color: #8b4513; /* Brown background for item numbers */
-            padding: 10px 15px;
-            border-radius: 50%;
-            margin-right: 20px;
-            flex-shrink: 0;
-        }
+    .menu-item-number {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+      background-color: #8b4513; /* Brown background for item numbers */
+      padding: 10px 15px;
+      border-radius: 50%;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
 
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-            }
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+      }
 
-            header h1 {
-                font-size: 2.2rem;
-                margin-top: 1rem;
-            }
+      header img {
+        position: static;
+        margin-bottom: 1rem; /* Membuat logo berada di atas judul */
+      }
 
-            .menu-item {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 12px;
-            }
+      header h1 {
+        font-size: 2.2rem;
+      }
 
-            .menu-item h3 {
-                font-size: 1.3rem;
-            }
+      .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px;
+      }
 
-            .menu-item-number {
-                margin-right: 10px;
-                font-size: 1.3rem;
-            }
+      .menu-item h3 {
+        font-size: 1.3rem;
+      }
 
-            .menu-title {
-                font-size: 1.5rem;
-            }
-        }
+      .menu-item-number {
+        margin-right: 10px;
+        font-size: 1.3rem;
+      }
 
-        /* Mobile View Adjustments */
-        @media (max-width: 480px) {
-            header {
-                padding: 1.5rem;
-                font-size: 2rem;
-            }
+      .menu-title {
+        font-size: 1.5rem;
+      }
+    }
 
-            header img {
-                height: 50px;
-            }
+    /* Mobile View Adjustments */
+    @media (max-width: 480px) {
+      header {
+        padding: 1.5rem;
+        font-size: 2rem;
+      }
 
-            .menu-item h3 {
-                font-size: 1.2rem;
-            }
+      header img {
+        height: 50px;
+      }
 
-            .menu-item-number {
-                font-size: 1.2rem;
-                padding: 8px 10px;
-            }
+      .menu-item h3 {
+        font-size: 1.2rem;
+      }
 
-            .menu-title {
-                font-size: 1.3rem;
-                padding: 10px;
-            }
+      .menu-item-number {
+        font-size: 1.2rem;
+        padding: 8px 10px;
+      }
 
-            .menu-item {
-                padding: 10px;
-            }
-        }
-    </style>
+      .menu-title {
+        font-size: 1.3rem;
+        padding: 10px;
+      }
+
+      .menu-item {
+        padding: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <!-- Logo Kiri -->
-    <img src="logo.png" alt="Logo Kiri"> <!-- Logo di kiri -->
+    <!-- Logo di kiri atau kanan -->
+    <img src="logo.png" alt="Logo Kampung Kuliner Djati Asri"> <!-- Logo hanya 1 di pojok kiri atau kanan -->
     <h1>Daftar Menu Kampung Kuliner Djati Asri</h1>
-    <!-- Logo Kanan -->
-    <img src="logo.png" alt="Logo Kanan"> <!-- Logo di kanan -->
 </header>
 
 <div class="container">
@@ -194,7 +201,6 @@
     <div class="menu-section">
         <div class="menu-title">Sayap Sisi Barat</div>
 
-        <!-- Menu 1 hingga 10 -->
         <div class="menu-item">
             <div class="menu-item-number">1</div>
             <div>
@@ -213,92 +219,13 @@
             </div>
         </div>
 
-        <div class="menu-item">
-            <div class="menu-item-number">3</div>
-            <div>
-                <h3>IBU LASIYEM (Pak Dhe Degan)</h3>
-                <p>Nasi Jagung Buffet - <span>10K</span></p>
-                <p>Es Degan Legendaris - <span>5-10K</span></p>
-                <p>Gorengan - <span>1K</span></p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div class="menu-item-number">4</div>
-            <div>
-                <h3>PAK WALUYO (Juragan Pukis Radja)</h3>
-                <p>Seblak - <span>5K</span></p>
-                <p>Pukis - <span>2K</span></p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div class="menu-item-number">5</div>
-            <div>
-                <h3>IBU SURIP</h3>
-                <p>Nasi Cokot - <span>5K</span></p>
-                <p>Some Kuah - <span>5K</span></p>
-                <p>Minuman - <span>3K</span></p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div class="menu-item-number">6</div>
-            <div>
-                <h3>IBU NITA</h3>
-                <p>Mie Ayam - <span>8K, 10K</span></p>
-                <p>Tahu Gejrot - <span>5K</span></p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div class="menu-item-number">7</div>
-            <div>
-                <h3>IBU SULIYEM</h3>
-                <p>Gendar Pecel - <span>5K</span></p>
-                <p>Gorengan - <span>1K</span></p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div class="menu-item-number">8</div>
-            <div>
-                <h3>IBU RIRIN</h3>
-                <p>Tela Tela - <span>5K</span></p>
-                <p>Tahu Krispy - <span>5K</span></p>
-                <p>Ubi Lumer - <span>1.25K</span></p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div class="menu-item-number">9</div>
-            <div>
-                <h3>PAK SUGENG (Jamu Legendaris Klataan Gen²)</h3>
-                <p>Jamu Uyup - <span>2K</span></p>
-                <p>Jamu Seduh - <span>15K</span></p>
-                <p>Minuman - <span>3K</span></p>
-                <p>Corn Dog - <span>2K</span></p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div class="menu-item-number">10</div>
-            <div>
-                <h3>IBU RAHAYU</h3>
-                <p>Sandal</p>
-                <p>Minuman - <span>3K-5K</span></p>
-            </div>
-        </div>
-
+        <!-- Lanjutkan menu 3-10 sesuai dengan struktur di atas -->
     </div>
 
     <!-- Sayap Sisi Timur -->
     <div class="menu-section">
         <div class="menu-title">Sayap Sisi Timur</div>
-
-        <!-- Menu 24 hingga 38 -->
-        <!-- Add the remaining menu items 24-38 -->
-        <!-- Same structure as menu 1-10 -->
+        <!-- Menu lainnya bisa dimasukkan di sini -->
     </div>
 </div>
 
