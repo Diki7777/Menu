@@ -21,27 +21,18 @@
     /* Header */
     header {
       display: flex;
-      justify-content: center; /* Menyusun konten header ke tengah */
-      align-items: flex-start; /* Menyusun teks di bawah gambar logo */
+      justify-content: center;
+      align-items: flex-start;
       position: relative;
       background-image: url('logo.png'); /* Gunakan logo sebagai background */
-      background-size: cover; /* Ukuran gambar sesuai ukuran container */
-      background-position: center top; /* Menyusun gambar di bagian atas */
+      background-size: cover;
+      background-position: center top;
       background-repeat: no-repeat;
-      height: 450px; /* Menentukan tinggi header untuk memastikan logo terlihat jelas */
+      height: 450px;
       color: #fff;
       text-align: center;
-      padding-top: 100px; /* Memberikan lebih banyak ruang dari atas untuk teks judul */
-      padding-bottom: 0; /* Mengurangi ruang di bawah header */
-    }
-
-    /* Judul */
-    header h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #ffcc00; /* Warna teks kuning cerah */
-      margin: 0;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Bayangan teks untuk kontras lebih baik */
+      padding-top: 100px;
+      padding-bottom: 0;
     }
 
     /* Menu Section */
@@ -49,21 +40,20 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 2rem 1rem;
-      padding-top: 50px; /* Memberikan padding-top untuk memberi ruang antara header dan konten */
+      padding-top: 50px;
     }
 
-    /* Teks Judul Daftar Menu yang lebih rendah agar tidak tumpang tindih */
+    /* Judul Utama */
     .main-title {
-      background-color: rgba(139, 69, 19, 0.7); /* Warm brown background */
+      background-color: rgba(139, 69, 19, 0.7);
       color: white;
       padding: 15px;
-      font-size: 2rem;
+      font-size: 1.8rem;
       text-align: center;
       margin-bottom: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       font-weight: bold;
-      margin-top: 100px; /* Menurunkan posisi teks lebih jauh */
     }
 
     /* Menu Section */
@@ -73,7 +63,7 @@
     }
 
     .menu-title {
-      background-color: rgba(139, 69, 19, 0.7); /* Warm brown background */
+      background-color: rgba(139, 69, 19, 0.7);
       color: white;
       padding: 15px;
       font-size: 1.8rem;
@@ -84,9 +74,9 @@
     }
 
     .menu-item {
-      background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for readability */
+      background-color: rgba(255, 255, 255, 0.9);
       border-radius: 10px;
-      border-left: 5px solid #8b4513; /* Brown border on the left */
+      border-left: 5px solid #8b4513;
       padding: 15px;
       margin: 10px 0;
       display: flex;
@@ -103,7 +93,7 @@
 
     .menu-item h3 {
       font-size: 1.4rem;
-      color: #8b4513; /* Warm brown for menu item headers */
+      color: #8b4513;
       margin: 0;
       flex-grow: 1;
     }
@@ -111,19 +101,19 @@
     .menu-item p {
       margin: 5px 0;
       font-size: 1rem;
-      color: #333; /* Dark gray text for better readability */
+      color: #333;
     }
 
     .menu-item span {
       font-weight: bold;
-      color: #8b4513; /* Same warm brown color for prices */
+      color: #8b4513;
     }
 
     .menu-item-number {
       font-size: 1.5rem;
       font-weight: bold;
       color: #fff;
-      background-color: #8b4513; /* Brown background for item numbers */
+      background-color: #8b4513;
       padding: 10px 15px;
       border-radius: 50%;
       margin-right: 20px;
@@ -132,13 +122,8 @@
 
     /* Media Queries for Responsiveness */
     @media (max-width: 768px) {
-      header {
-        height: 350px; /* Menyesuaikan tinggi header pada perangkat mobile */
-        padding-top: 100px; /* Memberikan lebih banyak ruang untuk teks pada perangkat mobile */
-      }
-
-      header h1 {
-        font-size: 2.5rem;
+      .main-title {
+        font-size: 1.8rem;
       }
 
       .menu-item {
@@ -161,15 +146,9 @@
       }
     }
 
-    /* Mobile View Adjustments */
     @media (max-width: 480px) {
-      header {
-        height: 300px; /* Lebih pendek untuk perangkat mobile */
-        padding-top: 80px; /* Memberikan ruang tambahan di atas header */
-      }
-
-      header h1 {
-        font-size: 2rem;
+      .main-title {
+        font-size: 1.5rem;
       }
 
       .menu-item h3 {
@@ -195,41 +174,43 @@
 <body>
 
 <header>
-    <!-- Judul -->
-    <h1>Daftar Menu Kampung Kuliner Djati Asri</h1>
+    <!-- Header image with logo -->
 </header>
 
 <div class="container">
-    <!-- Sayap Sisi Barat -->
-    <div class="menu-section">
-        <div class="menu-title">Sayap Sisi Barat</div>
+  <!-- Teks Judul Utama -->
+  <div class="main-title">Daftar Menu Kampung Kuliner Djati Asri</div>
 
-        <div class="menu-item">
-            <div class="menu-item-number">1</div>
-            <div>
-                <h3>IBU SIYEM</h3>
-                <p>Rujak - <span>5K</span></p>
-                <p>Pisang (Harga bervariasi)</p>
-            </div>
-        </div>
+  <!-- Sayap Sisi Barat -->
+  <div class="menu-section">
+    <div class="menu-title">Sayap Sisi Barat</div>
 
-        <div class="menu-item">
-            <div class="menu-item-number">2</div>
-            <div>
-                <h3>IBU SASHA</h3>
-                <p>Bakso Goreng - <span>1K</span> (Sold Out)</p>
-                <p>Aneka Minuman - <span>3K</span> (Sold Out)</p>
-            </div>
-        </div>
-
-        <!-- Lanjutkan menu 3-10 sesuai dengan struktur di atas -->
+    <div class="menu-item">
+      <div class="menu-item-number">1</div>
+      <div>
+        <h3>IBU SIYEM</h3>
+        <p>Rujak - <span>5K</span></p>
+        <p>Pisang (Harga bervariasi)</p>
+      </div>
     </div>
 
-    <!-- Sayap Sisi Timur -->
-    <div class="menu-section">
-        <div class="menu-title">Sayap Sisi Timur</div>
-        <!-- Menu lainnya bisa dimasukkan di sini -->
+    <div class="menu-item">
+      <div class="menu-item-number">2</div>
+      <div>
+        <h3>IBU SASHA</h3>
+        <p>Bakso Goreng - <span>1K</span> (Sold Out)</p>
+        <p>Aneka Minuman - <span>3K</span> (Sold Out)</p>
+      </div>
     </div>
+
+    <!-- Lanjutkan menu 3-10 sesuai dengan struktur di atas -->
+  </div>
+
+  <!-- Sayap Sisi Timur -->
+  <div class="menu-section">
+    <div class="menu-title">Sayap Sisi Timur</div>
+    <!-- Menu lainnya bisa dimasukkan di sini -->
+  </div>
 </div>
 
 </body>
