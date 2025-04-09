@@ -5,46 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Menu Kampung Kuliner Djati Asri</title>
     <style>
+        /* Mengatur body agar gambar latar belakang mencakup seluruh halaman */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f1e1;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    margin: 0;
+    padding: 0;
+    background-image: url('Goo.png'); /* Gambar latar belakang */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Menjaga latar belakang tetap di tempat */
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
 
         /* Header */
         header {
+            display: flex;
+            justify-content: space-between; /* Menyusun elemen di kiri dan kanan */
+            align-items: center; /* Memastikan logo dan teks header sejajar tengah */
             position: relative;
-            background: linear-gradient(135deg, #8b4513, #6d4c41);
-            color: white;
-            text-align: center;
-            padding: 3rem 0;
+            background: rgba(0, 0, 0, 0.6); /* Transparansi di background header */
+            color: #fff;
+            padding: 3rem 1.5rem;
             font-size: 3rem;
-            border-bottom: 5px solid #a0522d;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            border-bottom: 5px solid #8b4513; /* Warm brown border */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://source.unsplash.com/1600x900/?food'); /* Gambar latar belakang kuliner */
-            background-size: cover;
-            background-position: center;
-            opacity: 0.4; /* Menambahkan transparansi pada gambar latar belakang */
-            z-index: -1;
+        /* Logo di Kiri dan Kanan */
+        header img {
+            height: 200px; /* Ukuran logo */
+            width: auto;
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: bold;
-            color: white;
             animation: textAnimation 3s ease-in-out forwards;
+            color: #ffcc00; /* Warna teks kuning cerah */
+            text-align: center;
+            flex-grow: 1; /* Agar judul bisa memaksimalkan ruang yang tersedia */
         }
 
         @keyframes textAnimation {
@@ -63,7 +64,7 @@
         }
 
         header h1:hover {
-            color: #ffcc00; /* Efek hover: ubah warna teks saat kursor diarahkan */
+            color: #ffcc00; /* Hover effect: keep yellow on hover */
             transform: scale(1.1); /* Efek zoom saat hover */
             transition: transform 0.3s ease, color 0.3s ease;
         }
@@ -80,7 +81,7 @@
         }
 
         .menu-title {
-            background-color: #8d6e63;
+            background-color: rgba(139, 69, 19, 0.7); /* Warm brown background */
             color: white;
             padding: 15px;
             font-size: 1.8rem;
@@ -91,9 +92,9 @@
         }
 
         .menu-item {
-            background-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for readability */
             border-radius: 10px;
-            border-left: 5px solid #8b4513;
+            border-left: 5px solid #8b4513; /* Brown border on the left */
             padding: 20px;
             margin: 10px 0;
             display: flex;
@@ -108,88 +109,42 @@
         }
 
         .menu-item h3 {
-            font-size: 1.5rem;
-            color: #8b4513;
+            font-size: 1.6rem;
+            color: #8b4513; /* Warm brown for menu item headers */
             margin: 0;
         }
 
         .menu-item p {
             margin: 5px 0;
             font-size: 1.1rem;
-            color: #333;
+            color: #333; /* Dark gray text for better readability */
         }
 
         .menu-item span {
             font-weight: bold;
-            color: #8b4513;
+            color: #8b4513; /* Same warm brown color for prices */
         }
 
         .menu-item-number {
             font-size: 1.5rem;
             font-weight: bold;
             color: #fff;
-            background-color: #8b4513;
+            background-color: #8b4513; /* Brown background for item numbers */
             padding: 10px 15px;
             border-radius: 50%;
             margin-right: 20px;
             flex-shrink: 0;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                font-size: 2rem;
-                padding: 1.2rem 0;
-            }
-
-            .container {
-                padding: 1rem;
-            }
-
-            .menu-title {
-                font-size: 1.5rem;
-            }
-
-            .menu-item h3 {
-                font-size: 1rem;
-            }
-
-            .menu-item {
-                flex-direction: column;
-                padding: 15px;
-            }
-
-            .menu-item-number {
-                margin-bottom: 15px;
-                font-size: 1.2rem;
-                padding: 8px 12px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header {
-                font-size: 1.5rem;
-                padding: 1rem;
-            }
-
-            .menu-title {
-                font-size: 1.3rem;
-            }
-
-            .menu-item h3 {
-                font-size: 1rem;
-            }
-
-            .menu-item-number {
-                font-size: 1rem;
-                padding: 6px 10px;
-            }
         }
     </style>
 </head>
 <body>
 
 <header>
+    <!-- Logo Kiri -->
+    <img src="logo.png" alt="Logo Kiri"> <!-- Logo di kiri -->
     <h1>Daftar Menu Kampung Kuliner Djati Asri</h1>
+    <!-- Logo Kanan -->
+    <img src="logo.png" alt="Logo Kanan"> <!-- Logo di kanan -->
 </header>
 
 <div class="container">
@@ -197,6 +152,7 @@
     <div class="menu-section">
         <div class="menu-title">Sayap Sisi Barat</div>
 
+        <!-- Menu 1 hingga 10 -->
         <div class="menu-item">
             <div class="menu-item-number">1</div>
             <div>
@@ -220,7 +176,7 @@
             <div>
                 <h3>IBU LASIYEM (Pak Dhe Degan)</h3>
                 <p>Nasi Jagung Buffet - <span>10K</span></p>
-                <p>Es Degan - <span>5-10K</span></p>
+                <p>Es Degan Legendaris - <span>5-10K</span></p>
                 <p>Gorengan - <span>1K</span></p>
             </div>
         </div>
@@ -228,7 +184,7 @@
         <div class="menu-item">
             <div class="menu-item-number">4</div>
             <div>
-                <h3>PAK WALUYO (Pukis Radja)</h3>
+                <h3>PAK WALUYO (Juragan Pukis Radja)</h3>
                 <p>Seblak - <span>5K</span></p>
                 <p>Pukis - <span>2K</span></p>
             </div>
@@ -291,24 +247,153 @@
                 <p>Minuman - <span>3K-5K</span></p>
             </div>
         </div>
-    </div>
-
-    <!-- Sayap Sisi Timur -->
-    <div class="menu-section">
-        <div class="menu-title">Sayap Sisi Timur</div>
-
-        <div class="menu-item">
+		
+		 <div class="menu-item">
             <div class="menu-item-number">11</div>
             <div>
-                <h3>IBU IBU PKK RT04</h3>
-                <p>Pakaian - <span>10-75K</span></p>
+                <h3>IBU SRI REJEKI</h3>
+                <p>Aneka Kripik Daun - <span>5K</span></p>
+                <p>Wedang Jahe Gula Batu - <span>5K-7K</span></p>
+                <p>Rokok</p>
             </div>
         </div>
 
         <div class="menu-item">
             <div class="menu-item-number">12</div>
             <div>
-                <h3>PAK MARDI</h3>
+                <h3>IBU SIRU (Sate Legendaris Klataan)</h3>
+                <p>Sate Sapi, Gembus - <span>10K</span></p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-item-number">13</div>
+            <div>
+                <h3>IBU SUTI (Dawet Legendaris Terminal Lamo)</h3>
+                <p>Dawet - <span>4K</span></p>
+                <p>Nasi wiwit - <span>5K</span></p>
+                <p>Ronde - <span>5K</span></p>
+                <p>Lempeng - <span>6K</span></p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-item-number">14</div>
+            <div>
+                <h3>IBU RINDU</h3>
+                <p>Bintol - <span>5K</span></p>
+                <p>Tiwul - <span>5K</span></p>
+                <p>Gatot - <span>5K</span></p>
+                <p>Gemblong - <span>5K</span></p>
+                <p>Pecel - <span>5K</span></p>
+                <p>Brambang Asem - <span>5K</span></p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-item-number">15</div>
+            <div>
+                <h3>PAK AMIN (Leker Legendaris Kabupaten Lamo)</h3>
+                <p>Kue Leker - <span>3-15K</span></p>
+                <p>Minuman - <span>3K</span></p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-item-number">16</div>
+            <div>
+                <h3>IBU NING SUTRIS</h3>
+                <p>Nasi Kuning - <span>8K</span></p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-item-number">17</div>
+            <div>
+                <h3>IBU LASTRI</h3>
+                <p>Gado Gado - <span>7K</span></p>
+                <p>Es Buah - <span>5K</span> / Sold Out</p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-item-number">18</div>
+            <div>
+                <h3>IBU SARWATI</h3>
+                <p>Telor Asin - <span>3.5K</span></p>
+                <p>Telor Bebek Mentah - <span>2.7K</span></p>
+                <p>Lempeng - <span>6K</span></p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-item-number">19</div>
+            <div>
+                <h3>IBU YATI</h3>
+                <p>Bubur Kacang Ijo - <span>5K</span> / Sold Out</p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-item-number">20</div>
+            <div>
+                <h3>IBU BELA (Donat Legendaris Bu Karto)</h3>
+                <p>Donat - <span>2K</span></p>
+                <p>Bakpia - <span>10K</span></p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-item-number">21</div>
+            <div>
+                <h3>PAK SUSILO</h3>
+                <p>Sushi</p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-item-number">22</div>
+            <div>
+                <h3>PAK PURWADI</h3>
+                <p>Nasi Kremes Ayam - <span>7-10K</span> / Sold Out</p>
+                <p>Tahu Kupat - <span>7K</span></p>
+                <p>Tahu Kupat Telor - <span>10K</span></p>
+                <p>Lontong Opor - <span>10K</span></p>
+                <p>Teh Panas / Es Teh - <span>3K</span></p>
+                <p>Gorengan - <span>1K</span></p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-item-number">23</div>
+            <div>
+                <h3>PAK AMRIZAL</h3>
+                <p>Sate Sapi Jerohan - <span>10K</span></p>
+                <p>Bubur Tumpang - <span>4K</span> / Sold Out</p>
+                <p>Gorengan - <span>1K</span> / Sold Out</p>
+                <p>Minuman - <span>3K</span></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Sayap Sisi Timur -->
+    <div class="menu-section">
+        <div class="menu-title">Sayap Sisi Timur</div>
+
+        <!-- Menu 24 hingga 38 -->
+        <div class="menu-item">
+            <div class="menu-item-number">24</div>
+            <div>
+                <h3>IBU IBU PKK RT04 RWIX</h3>
+                <p>Pakaian - <span>10-75K</span></p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-item-number">25</div>
+            <div>
+                <h3>PAK MARDI (Nasi Goreng Jerman Beji Astono)</h3>
                 <p>Nasi Goreng - <span>10K</span></p>
                 <p>Kare - <span>5K</span></p>
                 <p>Minuman - <span>3K</span></p>
@@ -316,7 +401,7 @@
         </div>
 
         <div class="menu-item">
-            <div class="menu-item-number">13</div>
+            <div class="menu-item-number">26</div>
             <div>
                 <h3>IBU Winarti</h3>
                 <p>Nasi Jagung - <span>5K</span></p>
@@ -325,7 +410,7 @@
         </div>
 
         <div class="menu-item">
-            <div class="menu-item-number">14</div>
+            <div class="menu-item-number">27</div>
             <div>
                 <h3>IBU HARIYANI</h3>
                 <p>Nasi Kucing - <span>5K</span></p>
@@ -337,17 +422,17 @@
         </div>
 
         <div class="menu-item">
-            <div class="menu-item-number">15</div>
+            <div class="menu-item-number">28</div>
             <div>
                 <h3>IBU ANTI</h3>
                 <p>Nasi Bakar - <span>5K</span></p>
-                <p>Chicken Katsu - <span>10K</span></p>
+                <p>Chiken Katsu - <span>10K</span></p>
                 <p>Aneka Sosis - <span>5K</span></p>
             </div>
         </div>
 
         <div class="menu-item">
-            <div class="menu-item-number">16</div>
+            <div class="menu-item-number">29</div>
             <div>
                 <h3>IBU MARDINI</h3>
                 <p>Gethuk - <span>5K</span></p>
@@ -358,7 +443,7 @@
         </div>
 
         <div class="menu-item">
-            <div class="menu-item-number">17</div>
+            <div class="menu-item-number">30</div>
             <div>
                 <h3>IBU MAMIEK</h3>
                 <p>Jasuke - <span>5K</span></p>
@@ -368,7 +453,7 @@
         </div>
 
         <div class="menu-item">
-            <div class="menu-item-number">18</div>
+            <div class="menu-item-number">31</div>
             <div>
                 <h3>IBU PUJI</h3>
                 <p>Kebab Mini - <span>5K</span></p>
@@ -378,7 +463,7 @@
         </div>
 
         <div class="menu-item">
-            <div class="menu-item-number">19</div>
+            <div class="menu-item-number">32</div>
             <div>
                 <h3>IBU BIKI</h3>
                 <p>Dimsum - <span>2K</span></p>
@@ -387,7 +472,7 @@
         </div>
 
         <div class="menu-item">
-            <div class="menu-item-number">20</div>
+            <div class="menu-item-number">33</div>
             <div>
                 <h3>IBU ERNA</h3>
                 <p>Bakso Kuah - <span>3.5K</span></p>
@@ -396,7 +481,7 @@
         </div>
 
         <div class="menu-item">
-            <div class="menu-item-number">21</div>
+            <div class="menu-item-number">34</div>
             <div>
                 <h3>IBU MENIK</h3>
                 <p>Nasi/Bubur Tumpang - <span>5K</span></p>
@@ -406,17 +491,17 @@
         </div>
 
         <div class="menu-item">
-            <div class="menu-item-number">22</div>
+            <div class="menu-item-number">35</div>
             <div>
                 <h3>IBU TUMINI</h3>
-                <p>Nasi Uduk - <span>5K</span> (Sold Out)</p>
-                <p>Aneka Lauk - <span>5K</span> (Sold Out)</p>
+                <p>Nasi Uduk - <span>5K</span> / Sold Out</p>
+                <p>Aneka Lauk - <span>5K</span> / Sold Out</p>
                 <p>Aneka Snack - <span>Sold Out</span></p>
             </div>
         </div>
 
         <div class="menu-item">
-            <div class="menu-item-number">23</div>
+            <div class="menu-item-number">36</div>
             <div>
                 <h3>PAK KARYA DI</h3>
                 <p>Bubur Pelangi - <span>5K</span></p>
@@ -425,9 +510,9 @@
         </div>
 
         <div class="menu-item">
-            <div class="menu-item-number">24</div>
+            <div class="menu-item-number">37</div>
             <div>
-                <h3>IBU PARSINAH / Pak SODRUN</h3>
+                <h3>IBU PARSINAH / Pak SODRUN Pawang</h3>
                 <p>Nasi Rawon - <span>8K</span></p>
                 <p>Minuman - <span>3K</span></p>
                 <p>Gorengan - <span>1K</span></p>
@@ -435,142 +520,17 @@
         </div>
 
         <div class="menu-item">
-            <div class="menu-item-number">25</div>
+            <div class="menu-item-number">38</div>
             <div>
-                <h3>PAK AGUS SASTRO (Spesialis mainan anak)</h3>
+                <h3>PAK AGUS SASTRO Spesialis Mainan Anak</h3>
                 <p>Mandi Bola</p>
                 <p>Mainan Pancingan</p>
                 <p>Menggambar</p>
             </div>
         </div>
-		
-          <div class="menu-item">
-            <div class="menu-item-number">26</div>
-            <div>
-                <h3>PAK AMIN (Leker Legendaris Kabupaten Lamo)</h3>
-                <p>Kue Leker - <span>3-15K</span></p>
-                <p>Minuman - <span>3K</span></p>
-            </div>
-        </div>
 
-        <div class="menu-item">
-            <div class="menu-item-number">27</div>
-            <div>
-                <h3>IBU NING SUTRIS</h3>
-                <p>Nasi Kuning - <span>8K</span></p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div class="menu-item-number">28</div>
-            <div>
-                <h3>IBU LASTRI</h3>
-                <p>Gado Gado - <span>7K</span></p>
-                <p>Es Buah - <span>5K</span> (Sold Out)</p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div class="menu-item-number">29</div>
-            <div>
-                <h3>IBU SARWATI</h3>
-                <p>Telor Asin - <span>3.5K</span></p>
-                <p>Telor Bebek Mentah - <span>2.7K</span></p>
-                <p>Lempeng - <span>6K</span></p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div class="menu-item-number">30</div>
-            <div>
-                <h3>IBU YATI</h3>
-                <p>Bubur Kacang Ijo - <span>5K</span> (Sold Out)</p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div class="menu-item-number">31</div>
-            <div>
-                <h3>IBU BELA (Donat legendaris Bu Karto)</h3>
-                <p>Donat - <span>2K</span></p>
-                <p>Bakpia - <span>10K</span></p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div class="menu-item-number">32</div>
-            <div>
-                <h3>PAK SUSILO</h3>
-                <p>Sushi</p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div class="menu-item-number">33</div>
-            <div>
-                <h3>PAK PURWADI</h3>
-                <p>Nasi Kremes Ayam - <span>7-10K</span> (Sold Out)</p>
-                <p>Tahu Kupat - <span>7K</span></p>
-                <p>Tahu Kupat Telor - <span>10K</span></p>
-                <p>Lontong Opor - <span>10K</span></p>
-                <p>Teh Panas / Es Teh - <span>3K</span></p>
-                <p>Gorengan - <span>1K</span></p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div class="menu-item-number">34</div>
-            <div>
-                <h3>PAK AMRIZAL</h3>
-                <p>Sate Sapi Jerohan - <span>10K</span></p>
-                <p>Bubur Tumpang - <span>4K</span> (Sold Out)</p>
-                <p>Gorengan - <span>1K</span> (Sold Out)</p>
-                <p>Minuman - <span>3K</span></p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div class="menu-item-number">35</div>
-            <div>
-                <h3>IBU IBU PKK RT04</h3>
-                <p>Pakaian - <span>10-75K</span></p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div class="menu-item-number">36</div>
-            <div>
-                <h3>PAK MARDI</h3>
-                <p>Nasi Goreng - <span>10K</span></p>
-                <p>Kare - <span>5K</span></p>
-                <p>Minuman - <span>3K</span></p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div class="menu-item-number">37</div>
-            <div>
-                <h3>IBU Winarti</h3>
-                <p>Nasi Jagung - <span>5K</span></p>
-                <p>Aneka Krupuk - <span>5-10K</span></p>
-            </div>
-        </div>
-
-        <div class="menu-item">
-            <div class="menu-item-number">38</div>
-            <div>
-                <h3>IBU HARIYANI</h3>
-                <p>Nasi Kucing - <span>5K</span></p>
-                <p>Soto Ayam - <span>4K-7K</span></p>
-                <p>Gorengan - <span>1K</span></p>
-                <p>Es Kuwut - <span>5K</span></p>
-                <p>Minuman - <span>3K</span></p>
-            </div>
-        </div>
     </div>
-
 </div>
 
 </body>
 </html>
-
