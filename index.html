@@ -197,6 +197,27 @@
       .menu-item {
         padding: 10px;
       }
+      /* Mengatur nomor telepon di samping menu item number */
+      .phone-number {
+        font-size: 1rem;
+        color: #fff;
+        background-color: #8b4513; /* Warna latar belakang nomor telepon */
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-left: 15px; /* Memberikan jarak antara nomor telepon dan menu item number */
+        display: inline-block;
+        white-space: nowrap;
+      }
+
+    .phone-link {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      }
+
+    .phone-link:hover {
+      text-decoration: underline;
+      }
     }
   </style>
 </head>
@@ -223,6 +244,9 @@
 
         <div class="menu-item">
             <div class="menu-item-number">1</div>
+            <div class="phone-number">
+              <a href="tel:+628123456789" class="phone-link">+6282135212281</a>
+            </div>
             <div>
                 <h3>IBU JIYEM</h3>
                 <p>Rujak - <span>5K</span></p>
