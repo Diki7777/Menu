@@ -99,10 +99,11 @@
       padding: 15px;
       margin: 10px 0;
       display: flex;
-      justify-content: space-between; /* Menjaga elemen tetap terpisah */
+      justify-content: flex-start; /* Menjaga elemen tetap terpisah */
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      align-items: center;
+      flex-direction: column; /* Menyusun elemen secara vertikal */
+      align-items: flex-start; /* Menjaga konten tetap di kiri */
     }
 
     .menu-item:hover {
@@ -113,8 +114,7 @@
     .menu-item h3 {
       font-size: 1.4rem;
       color: #8b4513;
-      margin: 0;
-      flex-grow: 1;
+      margin: 5px 0;
     }
 
     .menu-item p {
@@ -136,6 +136,7 @@
       padding: 10px 15px;
       border-radius: 50%;
       margin-right: 10px; /* Menjaga jarak antara nomor dan telepon */
+      flex-shrink: 0;
     }
 
     /* Menambahkan styling untuk nomor telepon */
