@@ -128,16 +128,16 @@
       color: #8b4513;
     }
 
-    .menu-item-number {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #fff;
-      background-color: #8b4513;
-      padding: 10px 15px;
-      border-radius: 50%;
-      margin-right: 20px;
-      flex-shrink: 0;
-    }
+   
+.menu-item-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #8b4513;
+    padding: 10px 15px;
+    border-radius: 50%;
+    margin-right: 10px; /* Menjaga jarak antara nomor dan telepon */
+}
 
     /* Media Queries for Responsiveness */
     @media (max-width: 768px) {
@@ -151,10 +151,10 @@
       }
 
       .menu-item {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 12px;
-      }
+    display: flex;
+    align-items: center; /* Pastikan item berada dalam satu garis horizontal */
+    justify-content: flex-start; /* Menjaga konten di sebelah kiri */
+}
 
       .menu-item h3 {
         font-size: 1.3rem;
@@ -202,9 +202,7 @@
     font-size: 1rem;
     color: #8b4513;
     font-weight: bold;
-    margin-left: 20px; /* Memberikan jarak antara nomor dan elemen lainnya */
-    display: flex;
-    align-items: center;
+    margin-right: 20px; /* Menjaga jarak antara nomor telepon dan teks lainnya */
 }
 
 /* Menyesuaikan ukuran font jika di perangkat mobile */
