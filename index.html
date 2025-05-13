@@ -93,16 +93,16 @@
     }
 
     .menu-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       background-color: rgba(255, 255, 255, 0.9);
       border-radius: 10px;
       border-left: 5px solid #8b4513;
       padding: 15px;
       margin: 10px 0;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     .menu-item:hover {
@@ -114,6 +114,7 @@
       font-size: 1.4rem;
       color: #8b4513;
       margin: 0;
+      flex-grow: 1;
     }
 
     .menu-item p {
@@ -135,20 +136,7 @@
       padding: 10px 15px;
       border-radius: 50%;
       margin-right: 20px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
-
-    .menu-item-phone {
-      margin-left: 20px;
-    }
-
-    .phone-number {
-      font-size: 1rem;
-      color: #8b4513;
-      font-weight: bold;
-      margin-left: 10px; /* Space between number and phone */
+      flex-shrink: 0;
     }
 
     /* Media Queries for Responsiveness */
@@ -234,9 +222,7 @@
         <div class="menu-title">Sayap Sisi Barat</div>
 
         <div class="menu-item">
-           <span>1</span>
-           <span class="phone-number">082135212281</span>
-            </div>
+            <div class="menu-item-number">1</div>
             <div>
                 <h3>IBU JIYEM</h3>
                 <p>Rujak - <span>5K</span></p>
