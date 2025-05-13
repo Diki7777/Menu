@@ -99,11 +99,10 @@
       padding: 15px;
       margin: 10px 0;
       display: flex;
-      justify-content: flex-start; /* Menjaga elemen tetap terpisah */
+      align-items: center;
+      justify-content: space-between; /* Menjaga nomor dan telepon sejajar horizontal */
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      flex-direction: column; /* Menyusun elemen secara vertikal */
-      align-items: flex-start; /* Menjaga konten tetap di kiri */
     }
 
     .menu-item:hover {
@@ -159,6 +158,12 @@
         margin-left: 10px;
         font-size: 1rem;
       }
+    }
+
+    /* Untuk memastikan nama dan menu berada di bawah nomor dan telepon */
+    .menu-item > div {
+      display: block;
+      margin-top: 10px;
     }
   </style>
 </head>
