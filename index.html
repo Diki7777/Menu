@@ -99,10 +99,10 @@
       padding: 15px;
       margin: 10px 0;
       display: flex;
-      align-items: center; /* Menyusun item secara vertikal di tengah */
-      justify-content: flex-start; /* Menyusun elemen secara horizontal ke kiri */
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);     
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     .menu-item:hover {
@@ -135,7 +135,7 @@
       background-color: #8b4513;
       padding: 10px 15px;
       border-radius: 50%;
-      margin-right: 15px;
+      margin-right: 20px;
       flex-shrink: 0;
     }
 
@@ -197,17 +197,6 @@
       .menu-item {
         padding: 10px;
       }
-      
-      /* Menambahkan styling untuk nomor telepon */
-      .phone-number {
-        font-size: 1.2rem;
-        color: #fff;
-        background-color: #8b4513;
-        padding: 10px 15px;
-        border-radius: 50%;
-        margin-left: 15px; /* Memberikan jarak antara menu-item-number dan nomor telepon */
-        white-space: nowrap; /* Menjaga nomor telepon agar tidak terpotong */
-      }
     }
   </style>
 </head>
@@ -234,7 +223,6 @@
 
         <div class="menu-item">
             <div class="menu-item-number">1</div>
-            <div class="phone-number">+628123456789</div>
             <div>
                 <h3>IBU JIYEM</h3>
                 <p>Rujak - <span>5K</span></p>
