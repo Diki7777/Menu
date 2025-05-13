@@ -93,16 +93,16 @@
     }
 
     .menu-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       background-color: rgba(255, 255, 255, 0.9);
       border-radius: 10px;
       border-left: 5px solid #8b4513;
       padding: 15px;
       margin: 10px 0;
-      display: flex;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      align-items: center;
-      flex-wrap: wrap;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .menu-item:hover {
@@ -136,7 +136,16 @@
       padding: 10px 15px;
       border-radius: 50%;
       margin-right: 20px;
-      flex-shrink: 0;
+    }
+
+    .menu-item-phone {
+      margin-left: 20px;
+    }
+
+    .phone-number {
+      font-size: 1rem;
+      color: #8b4513;
+      font-weight: bold;
     }
 
     /* Media Queries for Responsiveness */
@@ -223,6 +232,9 @@
 
         <div class="menu-item">
             <div class="menu-item-number">1</div>
+            <div class="menu-item-phone">
+                <p class="phone-number">082135212281</p>
+            </div>
             <div>
                 <h3>IBU JIYEM</h3>
                 <p>Rujak - <span>5K</span></p>
