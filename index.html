@@ -102,7 +102,7 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       align-items: center;
-      flex-wrap: wrap;
+      justify-content: space-between; /* Menjaga elemen tetap terpisah */
     }
 
     .menu-item:hover {
@@ -140,10 +140,17 @@
     }
 
     .phone-number {
-      font-size: 1.1rem;
-      color: #333;
-      margin-left: 20px;
+      font-size: 1.2rem;
       font-weight: bold;
+      color: #333;
+      display: flex;
+      align-items: center;
+    }
+
+    .phone-number::before {
+      content: "📞";
+      margin-right: 8px; /* Menambahkan sedikit jarak antara ikon dan nomor */
+      font-size: 1.5rem; /* Menyesuaikan ukuran ikon */
     }
 
     /* Media Queries for Responsiveness */
@@ -219,10 +226,10 @@
 
 <div class="container">
     <!-- Teks Judul Utama -->
-<div class="main-title">
-    <div>Daftar Menu Kampung Kuliner Djati Asri</div>
-    <div>(Event Minggu Kliwon)</div>
-</div>
+    <div class="main-title">
+        <div>Daftar Menu Kampung Kuliner Djati Asri</div>
+        <div>(Event Minggu Kliwon)</div>
+    </div>
 
     <!-- Sayap Sisi Barat -->
     <div class="menu-section">
