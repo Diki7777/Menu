@@ -9,19 +9,123 @@
     body {
       margin: 0;
       padding: 0;
+      background-image: url('Goo.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      position: relative;
+      background-image: url('logo.png'); /* Gunakan logo sebagai background */
+      background-size: cover; /* Pastikan gambar latar belakang menutupi seluruh area */
+      background-position: center; /* Menyusun gambar di tengah agar tidak terpotong */
+      background-repeat: no-repeat;
+      height: 100vh; /* Gunakan tinggi penuh layar */
+      color: #fff;
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 0;
+    }
+
+    /* Judul */
+    header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #ffcc00; /* Warna teks kuning cerah */
+      margin: 0;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Bayangan teks untuk kontras lebih baik */
+    }
+
+    /* Lokasi Image */
+    .location-image {
+      width: 100%;
+      max-width: 800px;
+      margin-top: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Menu Section */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      padding-top: 50px;
+    }
+
+    /* Judul Daftar Menu Kampung Kuliner Djati Asri */
+    .main-title {
+      background-color: rgba(139, 69, 19, 0.7);
+      color: white;
+      padding: 15px;
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-weight: bold;
+    }
+
+    /* Menu Section */
+    .menu-section {
+      margin-top: 0;
+      margin-bottom: 3rem;
+    }
+
+    .menu-title {
+      background-color: rgba(139, 69, 19, 0.7);
+      color: white;
+      padding: 15px;
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-item {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      border-left: 5px solid #8b4513;
+      padding: 15px;
+      margin: 10px 0;
+      display: flex;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-item h3 {
+      font-size: 1.4rem;
+      color: #8b4513;
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    .menu-item p {
+      margin: 5px 0;
+      font-size: 1rem;
       color: #333;
     }
 
-    /* Container untuk menu */
-    .menu-item {
-      display: flex;
-      align-items: center;
-      background-color: #f9f9f9;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    .menu-item span {
+      font-weight: bold;
+      color: #8b4513;
     }
 
     .menu-item-number {
@@ -32,86 +136,132 @@
       padding: 10px 15px;
       border-radius: 50%;
       margin-right: 20px;
+      flex-shrink: 0;
     }
 
-    .menu-item-content {
-      flex-grow: 1;
-    }
-
-    .menu-item h3 {
-      font-size: 1.4rem;
-      color: #8b4513;
-      margin: 0;
-    }
-
-    .menu-item p {
-      margin: 5px 0;
-      font-size: 1rem;
-      color: #333;
-    }
-
-    .phone-number {
-      font-size: 1rem;
-      font-weight: bold;
-      color: #8b4513;
-      margin-left: auto; /* Menempatkan nomor telepon di kanan */
-    }
-
-    /* Media Queries untuk responsivitas */
+    /* Media Queries for Responsiveness */
     @media (max-width: 768px) {
+      header {
+        height: 350px; /* Menyesuaikan tinggi header pada perangkat mobile */
+        padding-top: 80px;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+
       .menu-item {
         flex-direction: column;
         align-items: flex-start;
+        padding: 12px;
       }
 
-      .phone-number {
-        margin-top: 10px;
+      .menu-item h3 {
+        font-size: 1.3rem;
+      }
+
+      .menu-item-number {
+        margin-right: 10px;
+        font-size: 1.3rem;
+      }
+
+      .menu-title {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        height: 300px;
+        padding-top: 60px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .menu-item h3 {
+        font-size: 1.2rem;
+      }
+
+      .menu-item-number {
+        font-size: 1.2rem;
+        padding: 8px 10px;
+      }
+
+      .menu-title {
+        font-size: 1.3rem;
+        padding: 10px;
+      }
+
+      .menu-item {
+        padding: 10px;
       }
     }
   </style>
 </head>
 <body>
 
+<header>
+    <!-- Header image with logo -->
+    <h1>Daftar Menu Kampung Kuliner Djati Asri</h1>
+</header>
+
+<!-- Menambahkan gambar lokasi.png di bawah header -->
+<img src="jln.png" alt="Lokasi Kampung Kuliner Djati Asri" class="location-image">
+
 <div class="container">
-  <div class="menu-item">
-    <div class="menu-item-number">1</div>
-    <div class="menu-item-content">
-      <h3>IBU JIYEM</h3>
-      <p>Rujak - <span>5K</span></p>
-      <p>Pisang (Harga bervariasi)</p>
-    </div>
-    <div class="phone-number">📞 08226186800</div>
-  </div>
+    <!-- Teks Judul Utama -->
+<div class="main-title">
+    <div>Daftar Menu Kampung Kuliner Djati Asri</div>
+    <div>(Event Minggu Kliwon)</div>
+</div>
 
-  <div class="menu-item">
-    <div class="menu-item-number">2</div>
-    <div class="menu-item-content">
-      <h3>IBU SASHA</h3>
-      <p>Bakso Goreng - <span>1K</span></p>
-      <p>Aneka Minuman - <span>3K</span></p>
-    </div>
-    <div class="phone-number">📞 08226186801</div>
-  </div>
+    <!-- Sayap Sisi Barat -->
+    <div class="menu-section">
+        <div class="menu-title">Sayap Sisi Barat</div>
 
-  <div class="menu-item">
-    <div class="menu-item-number">3</div>
-    <div class="menu-item-content">
-      <h3>IBU LASIYEM</h3>
-      <p>Nasi Jagung Prasmanan - <span>10K</span></p>
-      <p>Es Degan - <span>5K</span></p>
-    </div>
-    <div class="phone-number">📞 08226186802</div>
-  </div>
+        <div class="menu-item">
+            <div class="menu-item-number">1</div>
+            <div>
+                <h3>IBU JIYEM</h3>
+                <p>Rujak - <span>5K</span></p>
+                <p>Pisang (Harga bervariasi)</p>
+            </div>
+            <div class="phone-number">📞 08226186800</div>
+        </div>
 
-  <div class="menu-item">
-    <div class="menu-item-number">4</div>
-    <div class="menu-item-content">
-      <h3>Mas Io (Pukis Raja Legendaris)</h3>
-      <p>Seblak - <span>5K</span></p>
-      <p>Pukis - <span>2K</span></p>
-    </div>
-    <div class="phone-number">📞 08226186803</div>
-  </div>
+        <div class="menu-item">
+            <div class="menu-item-number">2</div>
+            <div>
+                <h3>IBU SASHA</h3>
+                <p>Bakso Goreng - <span>1K</span></p>
+                <p>Aneka Minuman - <span>3K</span></p>
+            </div>
+            <div class="phone-number">📞 08226186801</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-item-number">3</div>
+            <div>
+                <h3>IBU LASIYEM (Pak Dhe Degan)</h3>
+                <p>Nasi Jagung Prasmanan - <span>10K</span></p>
+                <p>Es Degan - <span>5-10K</span></p>
+                <p>Gorengan - <span>1K</span></p>
+                <p>Kopi + Teh - <span>3K</span></p>
+            </div>
+            <div class="phone-number">📞 08226186802</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-item-number">4</div>
+            <div>
+                <h3>Mas Io (Pukis Raja Legendaris)</h3>
+                <p>Seblak - <span>5K</span></p>
+                <p>Pukis - <span>2K</span></p>
+            </div>
+            <div class="phone-number">📞 08226186803</div>
+        </div>  
 </div>
 
 </body>
