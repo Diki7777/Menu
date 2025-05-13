@@ -144,15 +144,20 @@
       font-size: 1rem;
       color: #8b4513;
       font-weight: bold;
-      margin-right: 10px;
+      margin-left: 10px;
       white-space: nowrap; /* Menghindari teks terputus atau berpindah ke baris baru */
     }
 
     /* Menyesuaikan ukuran font jika di perangkat mobile */
     @media (max-width: 768px) {
+      .menu-item {
+        flex-direction: row; /* Menyusun elemen secara horizontal */
+        align-items: center; /* Menjaga item dalam satu garis */
+      }
+      
       .phone-number {
-        font-size: 0.9rem;
         margin-left: 10px;
+        font-size: 1rem;
       }
     }
   </style>
