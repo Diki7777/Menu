@@ -197,6 +197,24 @@
       .menu-item {
         padding: 10px;
       }
+      /* Menambahkan styling untuk nomor telepon */
+.phone-number {
+    font-size: 1rem;
+    color: #8b4513;
+    font-weight: bold;
+    margin-left: 20px; /* Memberikan jarak antara nomor dan elemen lainnya */
+    display: flex;
+    align-items: center;
+}
+
+/* Menyesuaikan ukuran font jika di perangkat mobile */
+@media (max-width: 768px) {
+    .phone-number {
+        font-size: 0.9rem;
+        margin-left: 10px;
+    }
+}
+
     }
   </style>
 </head>
@@ -223,6 +241,7 @@
 
         <div class="menu-item">
             <div class="menu-item-number">1</div>
+            <div class="phone-number">📞 08123456789</div>
             <div>
                 <h3>IBU JIYEM</h3>
                 <p>Rujak - <span>5K</span></p>
