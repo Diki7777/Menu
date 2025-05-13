@@ -135,82 +135,23 @@
       background-color: #8b4513;
       padding: 10px 15px;
       border-radius: 50%;
-      margin-right: 20px;
-      flex-shrink: 0;
+      margin-right: 10px; /* Menjaga jarak antara nomor dan telepon */
     }
 
+    /* Menambahkan styling untuk nomor telepon */
     .phone-number {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      color: #8b4513;
       font-weight: bold;
-      color: #333;
-      display: flex;
-      align-items: center;
-      margin-left: 15px; /* Menambahkan jarak antara nomor dan menu item */
+      margin-right: 10px;
+      white-space: nowrap; /* Menghindari teks terputus atau berpindah ke baris baru */
     }
 
-    .phone-number::before {
-      content: "📞";
-      margin-right: 8px; /* Menambahkan sedikit jarak antara ikon dan nomor */
-      font-size: 1.5rem; /* Menyesuaikan ukuran ikon */
-    }
-
-    /* Media Queries for Responsiveness */
+    /* Menyesuaikan ukuran font jika di perangkat mobile */
     @media (max-width: 768px) {
-      header {
-        height: 350px; /* Menyesuaikan tinggi header pada perangkat mobile */
-        padding-top: 80px;
-      }
-
-      header h1 {
-        font-size: 2.5rem;
-      }
-
-      .menu-item {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 12px;
-      }
-
-      .menu-item h3 {
-        font-size: 1.3rem;
-      }
-
-      .menu-item-number {
-        margin-right: 10px;
-        font-size: 1.3rem;
-      }
-
-      .menu-title {
-        font-size: 1.5rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header {
-        height: 300px;
-        padding-top: 60px;
-      }
-
-      header h1 {
-        font-size: 2rem;
-      }
-
-      .menu-item h3 {
-        font-size: 1.2rem;
-      }
-
-      .menu-item-number {
-        font-size: 1.2rem;
-        padding: 8px 10px;
-      }
-
-      .menu-title {
-        font-size: 1.3rem;
-        padding: 10px;
-      }
-
-      .menu-item {
-        padding: 10px;
+      .phone-number {
+        font-size: 0.9rem;
+        margin-left: 10px;
       }
     }
   </style>
@@ -238,26 +179,27 @@
 
         <div class="menu-item">
             <div class="menu-item-number">1</div>
+            <div class="phone-number">📞 08226186800</div>
             <div>
                 <h3>IBU JIYEM</h3>
                 <p>Rujak - <span>5K</span></p>
                 <p>Pisang (Harga bervariasi)</p>
             </div>
-            <div class="phone-number">08226186800</div>
         </div>
 
         <div class="menu-item">
             <div class="menu-item-number">2</div>
+            <div class="phone-number">📞 08226186800</div>
             <div>
                 <h3>IBU SASHA</h3>
                 <p>Bakso Goreng - <span>1K</span></p>
                 <p>Aneka Minuman - <span>3K</span></p>
             </div>
-            <div class="phone-number">085312345678</div>
         </div>
 
         <div class="menu-item">
             <div class="menu-item-number">3</div>
+            <div class="phone-number">📞 08562835182</div>
             <div>
                 <h3>IBU LASIYEM (Pak Dhe Degan)</h3>
                 <p>Nasi Jagung Prasmanan - <span>10K</span></p>
@@ -265,7 +207,16 @@
                 <p>Gorengan - <span>1K</span></p>
                 <p>Kopi + Teh - <span>3K</span></p>
             </div>
-            <div class="phone-number">081234567890</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-item-number">4</div>
+            <div class="phone-number">📞 081325512642</div>
+            <div>
+                <h3>Mas Io (Pukis Raja Legendaris)</h3>
+                <p>Seblak - <span>5K</span></p>
+                <p>Pukis - <span>2K</span></p>
+            </div>
         </div>
     </div>
 </div>
